@@ -1,74 +1,162 @@
-@import "tailwindcss/preflight";
-
-@tailwind utilities;
-
- 
-
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-a:hover {
-  color: #535bf2;
+
+html, body, #root {
+  height: 100%;
+  background: linear-gradient(135deg, #1a1f35 0%, #0c1220 100%);
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Clerk customization */
+.cl-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.cl-headerTitle,
+.cl-headerSubtitle {
+  display: none !important;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.cl-socialButtonsBlockButton {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
 }
+
+.cl-socialButtonsBlockButton:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #3b82f6 !important;
+}
+
+.cl-formButtonPrimary {
+  background: #3b82f6 !important;
+}
+
+.cl-formButtonPrimary:hover {
+  background: #2563eb !important;
+}
+
+.cl-footerActionLink {
+  color: #3b82f6 !important;
+}
+
+.cl-footerActionLink:hover {
+  color: #60a5fa !important;
+}
+
+.cl-formFieldInput {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+.cl-formFieldInput:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3) !important;
+}
+
+.cl-formFieldLabel {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.cl-dividerText {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.cl-dividerLine {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Hide all social login elements */
+.cl-socialButtonsBlock,
+.cl-socialButtons,
+.cl-socialButtonsBlockButton,
+.cl-socialButtonsIconButton,
+.cl-socialButtonsProviderIcon,
+.cl-socialButtonsBlockButtonArrow,
+.cl-socialButtonsBlockButtonText,
+[class*="cl-social"],
+[data-localization-key*="socialButtonsBlockButton"],
+[class*="clerk-social"],
+.cl-dividerLine,
+.cl-dividerText,
+.cl-dividerRow,
+.cl-alternativeMethodsButton,
+.cl-identityPreviewText,
+.cl-identityPreview,
+div[class*="cl-social"],
+div[class*="google"],
+button[class*="google"],
+button[class*="social"],
+div[class*="oauth"],
+div[class*="alternative"],
+div[data-localization-key*="continueWith"],
+div[data-localization-key*="socialButtonsBlockButton"],
+div[data-localization-key*="divider"],
+div[data-localization-key*="alternative"],
+div[class*="cl-internal"][class*="social"],
+div[class*="cl-internal"][class*="google"],
+div[class*="cl-internal"][class*="oauth"],
+div[class*="cl-internal"][class*="alternative"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-transform: scale(0) !important;
+  transform: scale(0) !important;
+}
+
+/* Remove any OAuth related elements */
+[class*="oauth"],
+[class*="alternative"],
+[class*="social"],
+[class*="google"],
+[class*="divider"] {
+  display: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Hide specific Clerk elements */
+.cl-internal-b3fm6y,
+.cl-internal-wkkbxp,
+.cl-internal-1q62XM,
+.cl-internal-1k9uqk7 {
+  display: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+} 

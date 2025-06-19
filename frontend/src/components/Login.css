@@ -1,0 +1,192 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.login-content {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-header {
+  margin-bottom: 2rem;
+}
+
+.login-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-header p {
+  color: #a8b1cf;
+  font-size: 1.1rem;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.login-footer {
+  text-align: center;
+  color: #a8b1cf;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Clerk component customization */
+.clerk-card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.clerk-title {
+  display: none !important;
+}
+
+.clerk-subtitle {
+  display: none !important;
+}
+
+.clerk-button {
+  background: #3b82f6 !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.75rem !important;
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  width: 100% !important;
+  transition: all 0.2s ease !important;
+}
+
+.clerk-button:hover {
+  background: #2563eb !important;
+}
+
+.clerk-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 0.75rem !important;
+}
+
+.clerk-input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3) !important;
+}
+
+.clerk-footer {
+  color: #a8b1cf !important;
+}
+
+/* Additional Clerk overrides */
+.cl-formFieldLabel {
+  color: #a8b1cf !important;
+}
+
+.cl-footerActionLink {
+  color: #3b82f6 !important;
+}
+
+.cl-footerActionLink:hover {
+  color: #60a5fa !important;
+}
+
+.cl-formFieldSuccessText {
+  color: #34d399 !important;
+}
+
+.cl-formFieldErrorText {
+  color: #f87171 !important;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  outline: none;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+}
+
+.qr-code img {
+  max-width: 200px;
+  height: auto;
+}
+
+.backup-codes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.backup-code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+} 

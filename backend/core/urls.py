@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import TaskListCreateView  # zamijeni sa stvarnim viewom
- 
+from .views import ProcessDocumentView, UnlockDocumentView
+
 urlpatterns = [
-    path('api/tasks/', TaskListCreateView.as_view(), name='task-list'),
-]
+    path('secure/', ProcessDocumentView.as_view(), name='secure-document'),
+    path('unlock/', UnlockDocumentView.as_view(), name='unlock-document'),
+] 
